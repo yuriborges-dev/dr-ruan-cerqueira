@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dr. Ruan Cerqueira | Prótese Dentária e Odontologia Estética em Guanambi</title>
+  <meta name="description" content="Consultório de Prótese Dentária e Odontologia Estética do Dr. Ruan Cerqueira em Guanambi, BA (CRO BA 24359). Transformações de sorrisos com naturalidade, harmonia e agendamento prévio.">
+  
+  <!-- Fontes Google: Plus Jakarta Sans e Alex Brush (Assinatura Autoral) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Folhas de Estilo Modulares -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon e Metatags -->
+  <meta name="theme-color" content="#0B0E0F">
+  <meta property="og:title" content="Dr. Ruan Cerqueira | Prótese Dentária e Odontologia Estética">
+  <meta property="og:description" content="Estúdio de transformação de sorrisos em Guanambi, Bahia. Atendimento exclusivo mediante agendamento prévio.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/dr-ruan-portrait.jpg">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Cabeçalho Fixo com Selo de Credencial e CTA de Agendamento
+       ======================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <div class="brand-wrapper">
+        <a href="#hero" class="brand-link" aria-label="Ir para o topo da página">
+          <div class="brand-title">Dr. Ruan Cerqueira</div>
+        </a>
+        <span class="brand-cro" title="Registro no Conselho Regional de Odontologia da Bahia">CRO BA 24359</span>
+      </div>
+
+      <nav class="nav-menu" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+          <li><a href="#transformacoes" class="nav-link">Transformações</a></li>
+          <li><a href="#consulta" class="nav-link">Como Funciona</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#contato" class="nav-link">Localização</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan%20Cerqueira.%20Gostaria%20de%20solicitar%20um%20agendamento%20de%20consulta." class="btn btn-whatsapp header-cta-btn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Agendar Consulta</span>
+      </a>
+
+      <!-- Botão Hambúrguer para Mobile (3 traços) -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Gaveta de Navegação Mobile -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#especialidades" class="mobile-nav-link">Especialidades</a></li>
+        <li><a href="#transformacoes" class="mobile-nav-link">Transformações</a></li>
+        <li><a href="#consulta" class="mobile-nav-link">Como Funciona</a></li>
+        <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+        <li><a href="#contato" class="mobile-nav-link">Localização</a></li>
+      </ul>
+      <div class="mobile-nav-cta">
+        <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan%20Cerqueira.%20Gostaria%20de%20solicitar%20um%20agendamento%20de%20consulta." class="btn btn-whatsapp" style="width: 100%;" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <span>Agendar no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. Abertura (Hero): Com Background de Vídeo Pré-configurado
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- 1. Background de Vídeo Pré-configurado com Opacidade e Posição Prontas -->
+      <div class="hero-video-wrapper" aria-hidden="true">
+        <video class="hero-video" autoplay muted playsinline poster="assets/images/dr-ruan-portrait.jpg">
+          <source src="assets/videos/hero-background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content-grid">
+          
+          <!-- Bloco de Texto Enxuto e Focado -->
+          <div class="hero-text-block reveal-on-scroll">
+            <div class="hero-meta-badge">
+              <span class="badge-credential">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                CRO BA 24359 • Guanambi, Bahia
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              A arte de reabilitar sorrisos com <span class="highlight-emerald">precisão e naturalidade.</span>
+            </h1>
+
+            <p class="hero-lead">
+              Especialista em prótese dentária e odontologia estética. Cuidado técnico minucioso para restaurar a anatomia e recuperar sua liberdade de sorrir abertamente.
+            </p>
+
+            <!-- Toque de Assinatura Cursiva Sob o Nome -->
+            <div class="doctor-signature-block">
+              <div>
+                <div class="signature-name-title">Dr. Ruan Cerqueira</div>
+                <div class="signature-name-role">Cirurgião-Dentista • Reabilitação Estética</div>
+              </div>
+              <div class="author-signature-cursive" aria-label="Assinatura manuscrita do Dr. Ruan Cerqueira">
+                Ruan Cerqueira
+              </div>
+            </div>
+
+            <!-- Único CTA com Indicação de Agendamento Prévio -->
+            <div class="hero-cta-group">
+              <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan%20Cerqueira.%20Gostaria%20de%20solicitar%20um%20agendamento%20de%20consulta." class="btn btn-whatsapp hero-cta-btn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                <span>Agendar Consulta no WhatsApp</span>
+              </a>
+
+              <div class="hero-cta-notice">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span>Atendimento individualizado e exclusivo com agendamento prévio necessário.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Espaço de Destaque para Retrato Real do Dr. Ruan Cerqueira -->
+          <div class="hero-portrait-wrapper reveal-on-scroll">
+            <div class="portrait-frame">
+              <img src="assets/images/dr-ruan-portrait.jpg" alt="Retrato profissional do Dr. Ruan Cerqueira sorrindo em estúdio fotográfico" class="portrait-img" width="819" height="1024">
+              
+              <!-- Selo Discreto de Credencial e Avaliação Google -->
+              <div class="portrait-floating-badge">
+                <div class="badge-rating-info">
+                  <div class="badge-stars-row">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span class="badge-score-text">5,0</span>
+                  </div>
+                  <span class="badge-reviews-subtext">14 avaliações no Google</span>
+                </div>
+                <div class="badge-cro-tag">
+                  Guanambi • BA
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Especialidades Reais Confirmadas (Sem Adição Não Verificada)
+         ====================================================================== -->
+    <section class="specialties-section" id="especialidades">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">Atuação Técnica</span>
+          <h2 class="section-title">Especialidades e Procedimentos</h2>
+          <p class="section-description">
+            Foco exclusivo em reabilitação oral e odontologia restauradora com fundamentos anatômicos consolidados.
+          </p>
+        </header>
+
+        <div class="specialties-grid">
+          
+          <!-- Especialidade 1: Prótese Dentária -->
+          <div class="specialty-card reveal-on-scroll">
+            <div>
+              <div class="specialty-header">
+                <div class="specialty-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 3v18"/>
+                    <path d="M3 12h18"/>
+                  </svg>
+                </div>
+                <div class="specialty-title-group">
+                  <h3 class="specialty-card-title">Prótese Dentária</h3>
+                  <span class="badge-credential-light badge-credential">Especialização Registrada</span>
+                </div>
+              </div>
+              <p class="specialty-card-desc">
+                Reabilitação estrutural e funcional para dentes quebrados, desgastados ou perdidos, restabelecendo a mordida equilibrada com materiais de alta adaptação biológica.
+              </p>
+            </div>
+            <div class="specialty-badge-list">
+              <span class="specialty-sub-badge">Prótese fixa cerâmica</span>
+              <span class="specialty-sub-badge">Reabilitação oral</span>
+              <span class="specialty-sub-badge">Equilíbrio funcional</span>
+            </div>
+          </div>
+
+          <!-- Especialidade 2: Odontologia Estética -->
+          <div class="specialty-card reveal-on-scroll">
+            <div>
+              <div class="specialty-header">
+                <div class="specialty-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </div>
+                <div class="specialty-title-group">
+                  <h3 class="specialty-card-title">Odontologia Estética</h3>
+                  <span class="badge-credential-light badge-credential">Harmonia e Proporção</span>
+                </div>
+              </div>
+              <p class="specialty-card-desc">
+                Planejamento individualizado da estética dental para valorizar a expressão natural do rosto, respeitando o formato dos lábios, o tom da pele e a anatomia original do sorriso.
+              </p>
+            </div>
+            <div class="specialty-badge-list">
+              <span class="specialty-sub-badge">Desenho personalizado do sorriso</span>
+              <span class="specialty-sub-badge">Harmonização anatômica</span>
+              <span class="specialty-sub-badge">Biomimética</span>
+            </div>
+          </div>
+
+          <!-- Procedimento Confirmado 1: Gengivoplastia -->
+          <div class="specialty-card reveal-on-scroll">
+            <div>
+              <div class="specialty-header">
+                <div class="specialty-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+                    <line x1="16" y1="8" x2="2" y2="22"/>
+                    <line x1="17.5" y1="15" x2="9" y2="15"/>
+                  </svg>
+                </div>
+                <div class="specialty-title-group">
+                  <h3 class="specialty-card-title">Gengivoplastia</h3>
+                  <span class="badge-credential-light badge-credential">Procedimento Evidenciado</span>
+                </div>
+              </div>
+              <p class="specialty-card-desc">
+                Remodelação cirúrgica minimamente invasiva do contorno da gengiva para corrigir sorrisos assimétricos ou com excesso de tecido, revelando a extensão real e proporcional dos dentes.
+              </p>
+            </div>
+            <div class="specialty-badge-list">
+              <span class="specialty-sub-badge">Correção de assimetria</span>
+              <span class="specialty-sub-badge">Contorno gengival estético</span>
+              <span class="specialty-sub-badge">Pós-operatório acompanhado</span>
+            </div>
+          </div>
+
+          <!-- Procedimento Confirmado 2: Ajuste Estético com Resina -->
+          <div class="specialty-card reveal-on-scroll">
+            <div>
+              <div class="specialty-header">
+                <div class="specialty-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                    <path d="M2 2l7.586 7.586"/>
+                    <circle cx="11" cy="11" r="2"/>
+                  </svg>
+                </div>
+                <div class="specialty-title-group">
+                  <h3 class="specialty-card-title">Ajuste Estético com Resina</h3>
+                  <span class="badge-credential-light badge-credential">Procedimento Evidenciado</span>
+                </div>
+              </div>
+              <p class="specialty-card-desc">
+                Escultura dental direta em resina composta com estratificação de cores para restaurar dentes desgastados por bruxismo, fechar diastemas e suavizar fraturas com transição invisível.
+              </p>
+            </div>
+            <div class="specialty-badge-list">
+              <span class="specialty-sub-badge">Reparação de bruxismo</span>
+              <span class="specialty-sub-badge">Fechamento de diastemas</span>
+              <span class="specialty-sub-badge">Polimento óptico natural</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-2xl); font-size: 0.8125rem; color: var(--text-dark-tertiary);">
+          Outras indicações e planejamento clínico personalizado: [confirmar com o cliente]
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. Transformações Reais: Obras Assinadas (Opção 2 com Botão Ver Detalhes)
+         ====================================================================== -->
+    <section class="transformations-section" id="transformacoes">
+      <div class="transformations-bg-vignette" aria-hidden="true"></div>
+      
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">Galeria Autoral</span>
+          <h2 class="section-title">Transformações Reais de Sorrisos</h2>
+          <p class="section-description">
+            Cada trabalho é planejado e assinado como uma obra individualizada, respeitando a harmonia facial, a proporção anatômica e a saúde biológica de cada paciente.
+          </p>
+        </header>
+
+        <div class="transformations-list">
+          
+          <!-- Caso 1: Gengivoplastia e Ajuste com Resina -->
+          <article class="transformation-card reveal-on-scroll">
+            <div class="transformation-visual-wrapper">
+              <div class="comparison-container">
+                <div class="comparison-side before">
+                  <span class="comparison-label">Antes</span>
+                  <img src="assets/images/case-1-before.jpg" alt="Fotografia macro dental do sorriso antes de gengivoplastia e ajuste com resina" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+                <div class="comparison-side-divider" aria-hidden="true"></div>
+                <div class="comparison-side after">
+                  <span class="comparison-label">Depois</span>
+                  <img src="assets/images/case-1-after.jpg" alt="Fotografia macro dental do sorriso após gengivoplastia e ajuste estético com resina" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+              </div>
+
+              <!-- Marca d'Água Assinada com Efeito de Realce no Hover -->
+              <div class="signed-watermark">
+                <span class="watermark-seal">Obra Assinada</span>
+                <span class="watermark-signature-name">Ruan Cerqueira</span>
+              </div>
+            </div>
+
+            <!-- Barra Inferior com Identificação e Botão Ver Detalhes (Opção 2) -->
+            <div class="transformation-card-bar">
+              <div class="case-summary-info">
+                <span class="case-category-pill">Odontologia Estética</span>
+                <h3 class="case-bar-title">Gengivoplastia e Ajuste Estético com Resina</h3>
+              </div>
+              <button class="btn-toggle-details" aria-expanded="false" aria-label="Ver detalhes do caso de gengivoplastia e resina">
+                <span class="btn-toggle-text">Ver Detalhes do Caso</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+
+            <!-- Gaveta Expansível com Explicação Completa e CTA -->
+            <div class="case-details-drawer">
+              <p class="drawer-description">
+                Caso clínico de paciente com desgaste incisal provocado por bruxismo e desarmonia no contorno gengival. O procedimento redesenhou a margem gengival e restabeleceu as bordas dentais com resina composta refinada, preservando a anatomia e a translucidez natural.
+              </p>
+              <ul class="drawer-highlights-list">
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Contorno gengival harmônico e proporcional</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Correção anatômica dos desgastes de bruxismo</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Acabamento imperceptível e textura natural de esmalte</span>
+                </li>
+              </ul>
+              <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan.%20Gostei%20do%20caso%20de%20gengivoplastia%20e%20ajuste%20com%20resina%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o." class="drawer-action-link" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar avaliação para este tipo de caso</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Caso 2: Prótese Dentária e Reabilitação Funcional -->
+          <article class="transformation-card reveal-on-scroll">
+            <div class="transformation-visual-wrapper">
+              <div class="comparison-container">
+                <div class="comparison-side before">
+                  <span class="comparison-label">Antes</span>
+                  <img src="assets/images/case-2-before.jpg" alt="Fotografia macro dental do sorriso antes da reabilitação protética" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+                <div class="comparison-side-divider" aria-hidden="true"></div>
+                <div class="comparison-side after">
+                  <span class="comparison-label">Depois</span>
+                  <img src="assets/images/case-2-after.jpg" alt="Fotografia macro dental do sorriso após instalação de prótese cerâmica" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+              </div>
+
+              <div class="signed-watermark">
+                <span class="watermark-seal">Obra Assinada</span>
+                <span class="watermark-signature-name">Ruan Cerqueira</span>
+              </div>
+            </div>
+
+            <div class="transformation-card-bar">
+              <div class="case-summary-info">
+                <span class="case-category-pill">Prótese Dentária</span>
+                <h3 class="case-bar-title">Reabilitação Estrutural e Prótese Dentária</h3>
+              </div>
+              <button class="btn-toggle-details" aria-expanded="false" aria-label="Ver detalhes do caso de prótese dentária">
+                <span class="btn-toggle-text">Ver Detalhes do Caso</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+
+            <div class="case-details-drawer">
+              <p class="drawer-description">
+                Reconstrução de elemento anterior fraturado e com alteração severa de cor. O tratamento restabeleceu a anatomia, o equilíbrio funcional da oclusão e a naturalidade estética através de prótese personalizada com encaixe biológico perfeito.
+              </p>
+              <ul class="drawer-highlights-list">
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Recuperação da integridade mastigatória e anatômica</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Translucidez cerâmica compatível com os dentes vizinhos</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Adaptação gengival saudável e durabilidade funcional</span>
+                </li>
+              </ul>
+              <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan.%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20pr%C3%B3tese%20dent%C3%A1ria." class="drawer-action-link" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar avaliação para prótese dentária</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Caso 3: Odontologia Estética Personalizada -->
+          <article class="transformation-card reveal-on-scroll">
+            <div class="transformation-visual-wrapper">
+              <div class="comparison-container">
+                <div class="comparison-side before">
+                  <span class="comparison-label">Antes</span>
+                  <img src="assets/images/case-3-before.jpg" alt="Fotografia macro dental do sorriso antes de ajuste estético com resina e fechamento de diastema" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+                <div class="comparison-side-divider" aria-hidden="true"></div>
+                <div class="comparison-side after">
+                  <span class="comparison-label">Depois</span>
+                  <img src="assets/images/case-3-after.jpg" alt="Fotografia macro dental do sorriso após harmonização estética com resina" class="comparison-img" loading="lazy" width="600" height="450">
+                </div>
+              </div>
+
+              <div class="signed-watermark">
+                <span class="watermark-seal">Obra Assinada</span>
+                <span class="watermark-signature-name">Ruan Cerqueira</span>
+              </div>
+            </div>
+
+            <div class="transformation-card-bar">
+              <div class="case-summary-info">
+                <span class="case-category-pill">Odontologia Estética</span>
+                <h3 class="case-bar-title">Fechamento de Diastema e Escultura em Resina</h3>
+              </div>
+              <button class="btn-toggle-details" aria-expanded="false" aria-label="Ver detalhes do caso de resina estética">
+                <span class="btn-toggle-text">Ver Detalhes do Caso</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+
+            <div class="case-details-drawer">
+              <p class="drawer-description">
+                Correção de espaçamentos anteriores e pequenas irregularidades de borda. O tratamento uniu arte e ciência através de estratificação delicada de resina estética, proporcionando um alinhamento visual contínuo e iluminado.
+              </p>
+              <ul class="drawer-highlights-list">
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Fechamento harmônico de espaços interdentais</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Preservação total da estrutura dental sadia</span>
+                </li>
+                <li class="drawer-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Brilho e polimento de alto padrão biológico</span>
+                </li>
+              </ul>
+              <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan.%20Gostaria%20de%20conversar%20sobre%20ajustes%20est%C3%A9ticos%20com%20resina." class="drawer-action-link" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar avaliação para odontologia estética</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Como Funciona a Consulta (Recebe o Fundo Estúdio do Hero)
+         ====================================================================== -->
+    <section class="process-section" id="consulta">
+      <!-- 2. Background do Estúdio Transferido do Hero -->
+      <div class="process-bg-studio" aria-hidden="true"></div>
+      <div class="process-grid-lines" aria-hidden="true"></div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag" style="color: var(--color-emerald-400);">Atendimento Dedicado</span>
+          <h2 class="section-title" style="color: var(--text-light-primary);">Como Funciona o Seu Atendimento</h2>
+          <p class="section-description" style="color: var(--text-light-secondary);">
+            Cada paciente recebe horário exclusivo na agenda, garantindo pontualidade, tranquilidade e avaliação profunda.
+          </p>
+        </header>
+
+        <div class="process-grid">
+          
+          <div class="process-step-card reveal-on-scroll">
+            <span class="step-number">01</span>
+            <h3 class="step-title">Agendamento Prévio</h3>
+            <p class="step-desc">
+              O atendimento no consultório exige agendamento prévio. Você escolhe o horário mais oportuno diretamente pelo WhatsApp com nossa equipe.
+            </p>
+          </div>
+
+          <div class="process-step-card reveal-on-scroll">
+            <span class="step-number">02</span>
+            <h3 class="step-title">Avaliação Minuciosa</h3>
+            <p class="step-desc">
+              Consulta detalhada para analisar a anatomia do sorriso, a integridade da gengiva, hábitos de mastigação (incluindo bruxismo) e expectativas estéticas.
+            </p>
+          </div>
+
+          <div class="process-step-card reveal-on-scroll">
+            <span class="step-number">03</span>
+            <h3 class="step-title">Planejamento e Execução</h3>
+            <p class="step-desc">
+              Apresentação clara da proposta de tratamento, escolha dos materiais e execução minuciosa com foco em preservação biológica e harmonia natural.
+            </p>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-3xl);" class="reveal-on-scroll">
+          <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan%20Cerqueira.%20Desejo%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>Reservar Horário de Consulta</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Prova Social: Carrossel com 6 Avaliações Padronizadas com Setas
+         ====================================================================== -->
+    <section class="social-proof-section" id="depoimentos">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">Experiência Real</span>
+          <h2 class="section-title">A Confiança de Quem Voltou a Sorrir</h2>
+          <p class="section-description">
+            Avaliações verificadas de pacientes atendidos no consultório em Guanambi (nota 5,0 no Google).
+          </p>
+        </header>
+
+        <!-- Carrossel de 6 Avaliações Padronizadas: 3 visíveis por vez com controle nas setas -->
+        <div class="reviews-carousel-wrapper reveal-on-scroll">
+          <div class="reviews-carousel-track-container">
+            <div class="reviews-carousel-track" id="reviewsTrack">
+              
+              <!-- Avaliação 1 (Relato de Gengivoplastia e Bruxismo Padronizado) -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "Tinha um incômodo antigo com o desgaste nos dentes pelo bruxismo. O Dr. Ruan realizou gengivoplastia e ajuste com resina respeitando a anatomia natural do meu sorriso. O resultado ficou harmônico, devolvendo minha autoestima para sorrir."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Gengivoplastia e Ajuste com Resina</span>
+                </div>
+              </div>
+
+              <!-- Avaliação 2: Competência Técnica -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "Profissional com competência técnica exemplar e notável dedicação em todas as etapas da consulta. Demonstra um rigor estético que transmite total tranquilidade."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Competência e Dedicação</span>
+                </div>
+              </div>
+
+              <!-- Avaliação 3: Cuidado e Humanidade -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "Excelente experiência: o Dr. Ruan conduz cada procedimento com extrema gentileza, clareza e sensibilidade humana. Faz você se sentir acolhido e seguro."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Cuidado e Humanidade</span>
+                </div>
+              </div>
+
+              <!-- Avaliação 4: Referência de Qualidade -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "Consolidado como uma das grandes referências em odontologia na nossa região. Os resultados estéticos surpreendem pela sofisticação e ausência de artificialismo."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Referência em Guanambi</span>
+                </div>
+              </div>
+
+              <!-- Avaliação 5: Acompanhamento Pós-Procedimento -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "O cuidado no pós-atendimento me impressionou. O Dr. Ruan acompanha pessoalmente a evolução da recuperação, com orientações claras e atenção total."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Acompanhamento Pós-Consulta</span>
+                </div>
+              </div>
+
+              <!-- Avaliação 6: Naturalidade e Precisão Anatômica -->
+              <div class="review-card">
+                <div>
+                  <div class="review-stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <p class="review-text">
+                    "Precisão minuciosa em cada detalhe anatômico. Conseguiu restabelecer a harmonia do meu sorriso com tanta naturalidade que ninguém percebe que houve intervenção."
+                  </p>
+                </div>
+                <div class="review-source">
+                  <span class="review-source-badge">Naturalidade e Simetria</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controles de Navegação com Setas e Indicadores -->
+          <div class="reviews-carousel-controls">
+            <button class="carousel-nav-btn" id="reviewsPrev" aria-label="Avaliações anteriores">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="carousel-dots" id="reviewsDots"></div>
+            <button class="carousel-nav-btn" id="reviewsNext" aria-label="Próximas avaliações">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Contato, Localização e Informações de Conveniência
+         ====================================================================== -->
+    <section class="contact-section" id="contato">
+      <!-- Background que estava em avaliações -->
+      <div class="contact-bg" aria-hidden="true"></div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag" style="color: var(--color-emerald-400);">Localização e Contato</span>
+          <h2 class="section-title" style="color: var(--text-light-primary);">Consultório em Guanambi</h2>
+          <p class="section-description" style="color: var(--text-light-secondary);">
+            Ambiente planejado para seu conforto, localizado no Centro de Guanambi com facilidade de acesso.
+          </p>
+        </header>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Informações de Contato e Horários -->
+          <div class="contact-details-card reveal-on-scroll">
+            <h3 class="contact-info-title">Dr. Ruan Cerqueira</h3>
+            
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-item-content">
+                  <h4>Endereço</h4>
+                  <p>Travessa Osvaldo Cruz, 44, Centro<br>Guanambi, BA, CEP 46430-000</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-item-content">
+                  <h4>Telefone e WhatsApp</h4>
+                  <p><a href="https://wa.me/5577999703332" target="_blank" rel="noopener noreferrer" style="color: var(--color-emerald-400); font-weight: 600;">(77) 99970-3332</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="contact-item-content">
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/dr.ruancerqueira/" target="_blank" rel="noopener noreferrer" style="color: var(--color-emerald-400); font-weight: 600;">@dr.ruancerqueira</a> (mais de 3.600 seguidores)</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="contact-item-content">
+                  <h4>Horário de Atendimento</h4>
+                  <p>Segunda a sexta: das 8h às 18h<br>Sábado: das 8h às 12h<br>Domingo: fechado</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facilidades de Pagamento e Estacionamento -->
+            <div class="convenience-pill-box">
+              <div class="convenience-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                  <line x1="1" y1="10" x2="23" y2="10"/>
+                </svg>
+                <span>Pagamento: Cartão de crédito, cartão de débito e aproximação</span>
+              </div>
+              <div class="convenience-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="5" width="20" height="14" rx="2"/>
+                  <circle cx="7" cy="15" r="2"/>
+                  <circle cx="17" cy="15" r="2"/>
+                </svg>
+                <span>Estacionamento: Gratuito na rua</span>
+              </div>
+              <div class="convenience-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Planejamento: Agendamento prévio obrigatório</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan.%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20de%20consulta." class="btn btn-whatsapp" style="width: 100%;" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              <span>Conversar pelo WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Mapa Incorporado do Google Maps -->
+          <div class="map-embed-wrapper reveal-on-scroll">
+            <iframe 
+              src="https://maps.google.com/maps?q=Dentista+Guanambi+Dr.+Ruan+Cerqueira+-14.2232732,-42.7825941&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="Localização do consultório do Dr. Ruan Cerqueira no Google Maps">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       8. Rodapé Institucional
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Dr. Ruan Cerqueira</h3>
+          <p>Cirurgião-Dentista • CRO BA 24359 • Guanambi, Bahia</p>
+          <p style="font-size: 0.75rem; margin-top: 4px; color: var(--color-emerald-400);">Prótese Dentária e Odontologia Estética</p>
+        </div>
+
+        <div class="footer-signature-seal">
+          <span>Ruan Cerqueira</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Dr. Ruan Cerqueira. Todos os direitos reservados. Atendimento exclusivo sob agendamento prévio.
+        </div>
+        <div>
+          Travessa Osvaldo Cruz, 44, Centro, Guanambi, BA
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       9. Botão Flutuante do WhatsApp para Mobile (Apenas a logo oficial)
+       ======================================================================== -->
+  <a href="https://wa.me/5577999703332?text=Ol%C3%A1%2C%20Dr.%20Ruan%20Cerqueira.%20Gostaria%20de%20solicitar%20um%20agendamento%20de%20consulta." class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Dr. Ruan Cerqueira no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
