@@ -32,11 +32,62 @@ function initHeroVideo() {
   var heroVideo = document.querySelector('.hero-video');
   if (!heroVideo) return;
 
+  // Garante propriedades cruciais para reprodução estável em mobile
+  heroVideo.muted = true;
+  heroVideo.defaultMuted = true;
+  heroVideo.playsInline = true;
+  heroVideo.setAttribute('playsinline', '');
+  heroVideo.setAttribute('webkit-playsinline', '');
+  heroVideo.setAttribute('x5-playsinline', '');
   heroVideo.removeAttribute('loop');
   heroVideo.loop = false;
 
+  function attemptPlay() {
+    var playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Se bloqueado pelo modo de economia de bateria ou política mobile,
+        // inicia assim que houver a primeira interação/toque na tela
+        function triggerOnInteraction() {
+          heroVideo.play().catch(function () {});
+          window.removeEventListener('touchstart', triggerOnInteraction);
+          window.removeEventListener('touchend', triggerOnInteraction);
+          window.removeEventListener('scroll', triggerOnInteraction);
+          window.removeEventListener('click', triggerOnInteraction);
+        }
+        window.addEventListener('touchstart', triggerOnInteraction, { passive: true });
+        window.addEventListener('touchend', triggerOnInteraction, { passive: true });
+        window.addEventListener('scroll', triggerOnInteraction, { passive: true });
+        window.addEventListener('click', triggerOnInteraction, { passive: true });
+      });
+    }
+  }
+
+  attemptPlay();
+  heroVideo.addEventListener('loadedmetadata', attemptPlay);
+  heroVideo.addEventListener('canplay', attemptPlay);
+
+  // Pausa no último frame de forma estável, sem permitir que o celular
+  // descarregue o buffer gráfico do vídeo ao atingir o evento 'ended'
+  var hasFrozen = false;
+  heroVideo.addEventListener('timeupdate', function () {
+    if (!hasFrozen && heroVideo.duration > 0) {
+      if (heroVideo.currentTime >= heroVideo.duration - 0.15) {
+        hasFrozen = true;
+        heroVideo.pause();
+      }
+    }
+  });
+
   heroVideo.addEventListener('ended', function () {
     heroVideo.pause();
+  });
+
+  // Mantém a reprodução caso o usuário alterne de aplicativo e retorne
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && !hasFrozen && heroVideo.paused) {
+      attemptPlay();
+    }
   });
 }
 

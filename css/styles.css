@@ -240,25 +240,44 @@ button {
 /* 1. Background de Vídeo Pré-configurado com Opacidade */
 .hero-video-wrapper {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   overflow: hidden;
   pointer-events: none;
+  background-color: var(--color-graphite-950);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   object-position: center;
   opacity: 0.9;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .hero-video-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle at 75% 35%, rgba(14, 73, 56, 0.32) 0%, rgba(11, 14, 15, 0.85) 60%, #0B0E0F 100%);
   opacity: var(--hero-video-overlay-opacity, 0.88);
+  pointer-events: none;
 }
 
 .hero-content-grid {
