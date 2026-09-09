@@ -94,9 +94,21 @@
     <section class="hero-section" id="hero">
       <!-- 1. Background de Vídeo Pré-configurado com Opacidade e Posição Prontas -->
       <div class="hero-video-wrapper" aria-hidden="true">
-        <video class="hero-video" autoplay muted playsinline webkit-playsinline x5-playsinline preload="auto" disablepictureinpicture disableremoteplayback>
+        <video class="hero-video" src="assets/videos/hero-background.mp4" autoplay loop muted playsinline webkit-playsinline x5-playsinline preload="auto" disablepictureinpicture disableremoteplayback>
           <source src="assets/videos/hero-background.mp4" type="video/mp4">
         </video>
+        <script>
+          (function() {
+            var v = document.querySelector('.hero-video');
+            if (v) {
+              v.muted = true;
+              v.defaultMuted = true;
+              v.playsInline = true;
+              var p = v.play();
+              if (p && p.catch) { p.catch(function(){}); }
+            }
+          })();
+        </script>
         <div class="hero-video-overlay"></div>
       </div>
 

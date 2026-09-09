@@ -32,43 +32,22 @@ function initHeroVideo() {
   var heroVideo = document.querySelector('.hero-video');
   if (!heroVideo) return;
 
-  // Garante propriedades cruciais para reprodução estável em mobile
+  // Garante que o elemento esteja marcado como mudo e com reproducao em linha
   heroVideo.muted = true;
   heroVideo.defaultMuted = true;
   heroVideo.playsInline = true;
-  heroVideo.setAttribute('playsinline', '');
-  heroVideo.setAttribute('webkit-playsinline', '');
-  heroVideo.setAttribute('x5-playsinline', '');
-  heroVideo.removeAttribute('loop');
-  heroVideo.loop = false;
 
-  function attemptPlay() {
-    var playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(function () {
-        // Se bloqueado pelo modo de economia de bateria ou política mobile,
-        // inicia assim que houver a primeira interação/toque na tela
-        function triggerOnInteraction() {
-          heroVideo.play().catch(function () {});
-          window.removeEventListener('touchstart', triggerOnInteraction);
-          window.removeEventListener('touchend', triggerOnInteraction);
-          window.removeEventListener('scroll', triggerOnInteraction);
-          window.removeEventListener('click', triggerOnInteraction);
-        }
-        window.addEventListener('touchstart', triggerOnInteraction, { passive: true });
-        window.addEventListener('touchend', triggerOnInteraction, { passive: true });
-        window.addEventListener('scroll', triggerOnInteraction, { passive: true });
-        window.addEventListener('click', triggerOnInteraction, { passive: true });
-      });
-    }
+  // Tenta iniciar a reproducao imediatamente
+  var playPromise = heroVideo.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(function () {
+      heroVideo.muted = true;
+      heroVideo.play().catch(function () {});
+    });
   }
 
-  attemptPlay();
-  heroVideo.addEventListener('loadedmetadata', attemptPlay);
-  heroVideo.addEventListener('canplay', attemptPlay);
-
-  // Pausa no último frame de forma estável, sem permitir que o celular
-  // descarregue o buffer gráfico do vídeo ao atingir o evento 'ended'
+  // Congela de forma suave no ultimo frame sem permitir que o celular
+  // reinicie o ciclo ou descarregue o buffer grafico do video
   var hasFrozen = false;
   heroVideo.addEventListener('timeupdate', function () {
     if (!hasFrozen && heroVideo.duration > 0) {
@@ -83,10 +62,10 @@ function initHeroVideo() {
     heroVideo.pause();
   });
 
-  // Mantém a reprodução caso o usuário alterne de aplicativo e retorne
+  // Mantem a reproducao caso o usuario alterne de aba/aplicativo antes do termino
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && !hasFrozen && heroVideo.paused) {
-      attemptPlay();
+      heroVideo.play().catch(function () {});
     }
   });
 }
