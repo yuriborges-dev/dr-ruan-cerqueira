@@ -269,6 +269,14 @@ button {
   -webkit-backface-visibility: hidden;
 }
 
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  opacity: 0 !important;
+}
+
 .hero-video-overlay {
   position: absolute;
   top: 0;

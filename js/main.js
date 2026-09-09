@@ -32,22 +32,38 @@ function initHeroVideo() {
   var heroVideo = document.querySelector('.hero-video');
   if (!heroVideo) return;
 
-  // Garante que o elemento esteja marcado como mudo e com reproducao em linha
+  // Garante propriedades cruciais para autoplay em mobile
   heroVideo.muted = true;
   heroVideo.defaultMuted = true;
   heroVideo.playsInline = true;
 
-  // Tenta iniciar a reproducao imediatamente
-  var playPromise = heroVideo.play();
-  if (playPromise !== undefined) {
-    playPromise.catch(function () {
-      heroVideo.muted = true;
-      heroVideo.play().catch(function () {});
-    });
+  function attemptPlay() {
+    var p = heroVideo.play();
+    if (p !== undefined) {
+      p.catch(function () {
+        // Fallback garantido: se o celular estiver em Modo de Pouca Energia (iOS Low Power Mode),
+        // qualquer primeiro toque ou rolagem destrava o video de imediato e sem exibir botao
+        function unlockOnGesture() {
+          heroVideo.muted = true;
+          heroVideo.play().catch(function () {});
+          window.removeEventListener('touchstart', unlockOnGesture);
+          window.removeEventListener('touchend', unlockOnGesture);
+          window.removeEventListener('click', unlockOnGesture);
+          window.removeEventListener('scroll', unlockOnGesture);
+        }
+        window.addEventListener('touchstart', unlockOnGesture, { passive: true });
+        window.addEventListener('touchend', unlockOnGesture, { passive: true });
+        window.addEventListener('click', unlockOnGesture, { passive: true });
+        window.addEventListener('scroll', unlockOnGesture, { passive: true });
+      });
+    }
   }
 
-  // Congela de forma suave no ultimo frame sem permitir que o celular
-  // reinicie o ciclo ou descarregue o buffer grafico do video
+  attemptPlay();
+  heroVideo.addEventListener('loadeddata', attemptPlay);
+  heroVideo.addEventListener('canplay', attemptPlay);
+
+  // Congela de forma suave no ultimo frame sem descarregar a memoria de video do celular
   var hasFrozen = false;
   heroVideo.addEventListener('timeupdate', function () {
     if (!hasFrozen && heroVideo.duration > 0) {
@@ -65,7 +81,7 @@ function initHeroVideo() {
   // Mantem a reproducao caso o usuario alterne de aba/aplicativo antes do termino
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && !hasFrozen && heroVideo.paused) {
-      heroVideo.play().catch(function () {});
+      attemptPlay();
     }
   });
 }
